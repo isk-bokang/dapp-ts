@@ -68,7 +68,7 @@ async function requestAccount() {
 }
 
 function HandleChangeNetworkEvent() {
-  if (window.ethereum?.chainId !== goerli.chainId && window.ethereum?.isConnected()) {
+  if (window.ethereum?.chainId !== goerli.chainId && window.ethereum?.selectedAddress != null) {
     alert(" Need To Change Network to Goerli")
     console.log(switchNetwork());
     window.location.reload();
